@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <title>Magickey</title>
+    <link rel = "icon" href =  
+        "images/fav.png"
+        type = "image/x-icon">
+    <!-- <link rel="stylesheet" href="css/bootstrap.min.css"> -->
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Abril+Fatface" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bitter:ital@1&display=swap" rel="stylesheet">
+     <style>
+         
+         *{
+                 box-sizing: border-box;
+             }
+             #box{
+                 background-color: white;
+                 width:50%;
+                 margin-left: 10px;
+                 border: 1px solid navy;
+                 border-radius: 30px;
+                 color: white;
+                 text-align: center;
+                 padding: 10px;
+                 padding-bottom: 30px;
+                 margin: auto;
+                 font-size: 1.2em;
+                 background: radial-gradient(rgba(0, 0, 128, 0.876),rgba(32, 23, 23, 0.863));
+             }
+            body{
+                font-size: 15px;
+                font-family: 'Bitter', serif;
+                background: url("music-bg.jpg") no-repeat center fixed;
+                background-size: cover;
+            }
+          
+           #header-nav{
+             background:radial-gradient(navy,black);
+             
+             border-radius: 0;
+             border: 0;
+             height:125px;
+            }
+         .audio-element{
+             margin-top: 40px;
+             width: 80%;
+             margin-bottom: 80px;
+             margin-left:60px;
+         }
+         b{
+             margin-left: 20px;
+         }
+         .img-responsive {
+        display: block;
+        height: auto;
+        max-width: 80%;
+    }
+   #button-here{
+       text-align: center;
+       margin-top: 10px;
+       width: fit-content;
+       margin-left: auto;
+       margin-right: auto;
+       background-color: navy;
+       height: 40px;
+       border-radius: 10px;
+       padding: 10px;
+       
+   }
+   .btn{
+       /* margin-top: 30px;
+       height:40px; */
+       color: white;
+       text-decoration: none;
+       padding: 20px;
+   }
+   #button-here:hover{
+       color: white;
+       text-decoration: none;
+       background: radial-gradient(navy,black);
+   }
+   /* --------------------------------------------------------------------------- */
+    #head {
+        background: radial-gradient(navy,black);
+        height: auto;
+        margin-top: -135px;
+        margin-left: -10px;
+        margin-right: -10px;
+        
+    }   
+    h1{
+        font-size:200px;
+        padding-bottom: 5px;
+      
+    }
+   
+  
+        
+    </style> 
+</head>
+<body>
+   
+    <!-- <header>
+        <nav id="header-nav" class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <div class="navbar-brand">
+                        <a href="index.html"><img src="music-logo.png" class="img-responsive"> </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header> -->
+    <div id="head">
+        <h1><a href="index.html"><img src="music-logo.png" class="img-responsive"> </a></h1>
+    </div>
+  
+    <audio class="audio-element" controls="true" preload="none">
+        <source type="audio/mpeg">
+            <br>
+            <b>Your outdated browser doesn't support audio.</b>
+    </audio>
+ 
+   
+    <div id="box"><br><b>Title</b>: <span id="songTitle"></span><br>
+        <b>Singer</b>: <span id="songAlbum"></span><br>
+       </div> 
+      <div id="button-here">
+        <a href="index.html" class="btn btn-dark" role="button">BACK TO HOME</a>
+   
+      </div> 
+    <script>
+        var songs=[
+        {filename: "songs/song1.mp3", title: "Closer", singer: "Chainsmokers"},
+           {filename: "songs/song2.mp3", title: "Tere Bin Nahi Lagda", singer: "Unknown" },
+           {filename: "songs/song3.mp3", title: "Pikachu", singer: "Unknown" },
+           {filename: "songs/song4.mp3", title: "Bulave tujhe yar aj meri galiyan", singer: "Akhil"},
+           {filename: "songs/song5.mp3", title: "Vaaste", singer: "Dhvani Bhanushali"},
+           {filename: "songs/song6.mp3", title: "ishq tera", singer: "Guru Randhawa" },
+           {filename: "songs/song7.mp3", title: "Can we kiss", singer: "Unknown" },
+           {filename: "songs/song8.mp3", title: "Filhaal tone", singer: "Arijit Singh" },
+           {filename: "songs/song9.mp3", title: "love me like you do", singer: "Ellie Goulding" },
+           {filename: "songs/song10.mp3", title: "Naina", singer: "Arijit Singh" },
+           {filename: "songs/song11.mp3", title: "Nazm nazm", singer: "Ayushman Khurana" },
+           {filename: "songs/song12.mp3", title: "On my way", singer: "Alen Walker" },
+           {filename: "songs/song13.mp3", title: "Perfect", singer: "Ed Shreen" },
+           {filename: "songs/song14.mp3", title: "Pubg song", singer: "Unknown" },
+           {filename: "songs/song15.mp3", title: "Rabb wangu", singer: "Jass Manak" },
+           {filename: "songs/song16.mp3", title: "Relation", singer: "Nikk" },
+           {filename: "songs/song17.mp3", title: "rula k gaya", singer: "Unknown" },
+           {filename: "songs/song18.mp3", title: "sau dard", singer: "Unknown" },
+           {filename: "songs/song19.mp3", title: "See you again", singer: "Unknown" },
+           {filename: "songs/song20.mp3", title: "Senorita", singer: "Camila Cabello" },
+           {filename: "songs/song21.mp3", title: "Shaayad", singer: "Arijit Singh" },
+           {filename: "songs/song22.mp3", title: "Sohneya", singer: "Unknown" },
+           {filename: "songs/song23.mp3", title: "Tere sang yara", singer: "Atif Aslam" },
+           {filename: "songs/song24.mp3", title: "Tu hi yaar mera", singer: "Arijeet Singh, Neha Kakkar" },
+           {filename: "songs/song25.mp3", title: "Tujhe kitna chahne lge hm", singer: "Arijit Singh" },
+           {filename: "songs/song26.mp3", title: "Tum hi ana", singer: "Jubin Nautiyal" },
+           {filename: "songs/song27.mp3", title: "Indian Army", singer: "Sumit Goswami" },
+           {filename: "songs/song28.mp3", title:"Yaar Superstar",singer:"Hardy Sandhu"},
+           {filename: "songs/song29.mp3",title:"She don't know",singer:"Millind Gaba"},
+           {filename: "songs/song30.mp3",title:"Coka",singer:"Sukhe"},
+           {filename: "songs/song31.mp3",title:"First class",singer:"Arijit Singh, Neeti Mohan"},
+           {filename: "songs/song32.mp3",title:"Sher aaya sher",singer:" Divine"},
+           {filename: "songs/song33.mp3",title:"Photo",singer:"Darshan Raval "},
+           {filename: "songs/song34.mp3",title:"Coca cola",singer:"Tony Kakkar"},
+           {filename: "songs/song35.mp3",title:"Ek ladki ko dekha toh",singer:"Darshan Raval"},
+           {filename: "songs/song36.mp3",title:"Daru Badnaam",singer:"Param Singh"},
+           {filename: "songs/song37.mp3",title:"Lakdi ki kathi",singer:"Unknown"},
+           {filename: "songs/song38.mp3",title:"Doraemon",singer:"Unknown"}
+      
+          
+        ];
+        var randomIndex= Math.floor(Math.random()*songs.length);
+        var song=songs[randomIndex];
+        document.querySelector("source").src=song.filename;
+        document.getElementById("songTitle").textContent=song.title;
+        document.getElementById("songAlbum").textContent=song.singer;
+
+    </script>
+   
+         
+</body>
